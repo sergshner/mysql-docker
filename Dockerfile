@@ -12,6 +12,7 @@ VOLUME /var/lib/mysql
 VOLUME /var/log/mysql
 
 COPY docker-entrypoint.sh /entrypoint.sh
+RUN chmod 0755 /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 3306 33060
